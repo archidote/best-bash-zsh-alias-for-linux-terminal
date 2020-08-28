@@ -82,5 +82,5 @@ alias ch='hostnamectl set-hostname $1'
 alias s='sudo su'
 EOF
 source $HOME/.bashrc
-echo -e "\e[92mPlease open a new terminal tab, to run the added alias \e[39m"
+echo -e "\e[92mDone, please open a new terminal tab, to run the added aliases\e[39m"
 
