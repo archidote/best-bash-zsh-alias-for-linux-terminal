@@ -55,6 +55,9 @@ alias Gc='git clone $1'
 alias ga='git add .'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
+alias gs='git status'
+
+# alias added by bestAliasLinux (Brlndtech Edit)  
 alias gpom='git push origin master'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
@@ -80,6 +83,16 @@ alias ch='hostnamectl set-hostname $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit) 
 alias s='sudo su'
+
+# alias added by bestAliasLinux (Brlndtech Edit) 
+alias coder='code --user-data-dir'
+
+# alias added by bestAliasLinux (Brlndtech Edit) 
+alias pi='ping 1.1.1.1'
+
+# alias added by bestAliasLinux (Brlndtech Edit) 
+alias pii='ping t.co'
+
 EOF
 source $HOME/.bashrc
 echo -e "\e[92mDone, please open a new terminal tab, to run the added aliases\e[39m"
