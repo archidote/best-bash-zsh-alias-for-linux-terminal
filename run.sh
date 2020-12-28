@@ -1,99 +1,99 @@
 #!/bin/bash
 cat >> $HOME/.bashrc << EOF
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias 1='apt update && apt upgrade'
+alias 1='sudo apt update && apt upgrade'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias 2='apt autoremove && apt purge'
+alias 2='sudo apt autoremove && apt purge'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias p='ping'
+alias p='sudo ping'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias c='clear'
+alias c='sudo clear'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias e='exit'
+alias e='sudo exit'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias uu='apt update && apt upgrade'
+alias uu='sudo apt update && apt upgrade'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias jj='apt autoremove'
+alias jj='sudo apt autoremove'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias ai='apt install'
+alias ai='sudo apt install'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias ap='apt purge'
+alias ap='sudo apt purge'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias l='ls -alt'
+alias l='sudo ls -alt'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias cdh='cd $HOME'
+alias cdh='sudo cd $HOME'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias f='find -name $1'
+alias f='sudo find -name $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias fr='find / -name $1'
+alias fr='sudo find / -name $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias ..='cd ..'
+alias ..='sudo cd ..'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias b='cd -'
+alias b='sudo cd -'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias cda='cd /var/www/html'
+alias cda='sudo cd /var/www/html'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias Gc='git clone $1'
+alias Gc='sudo git clone $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias ga='git add .'
+alias ga='sudo git add .'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias gs='git status'
+alias gs='sudo git status'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias gpom='git push origin master'
+alias gpom='sudo git push origin master'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias gpo='git push origin $1'
+alias gpo='sudo git push origin $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias sr='systemctl restart $1'
+alias sr='sudo systemctl restart $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias sss='systemctl status $1'
+alias sss='sudo systemctl status $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias ssss='systemctl start $1'
+alias ssss='sudo systemctl start $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias stp='systemctl stop $1'
+alias stp='sudo systemctl stop $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias se='systemctl enable $1'
+alias se='sudo systemctl enable $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias ch='hostnamectl set-hostname $1'
+alias ch='sudo hostnamectl set-hostname $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit) 
-alias s='sudo su'
+alias s='sudo sudo su'
 
 # alias added by bestAliasLinux (Brlndtech Edit) 
-alias coder='code --user-data-dir'
+alias coder='sudo code --user-data-dir'
 
 # alias added by bestAliasLinux (Brlndtech Edit) 
-alias pi='ping 1.1.1.1'
+alias pi='sudo ping 1.1.1.1'
 
 # alias added by bestAliasLinux (Brlndtech Edit) 
-alias pii='ping t.co'
+alias pii='sudo ping t.co'
 
 EOF
 source $HOME/.bashrc
-echo -e "\e[92mDone, please open a new terminal tab, to run the added aliases\e[39m"
+echo -e "\e[92m it's ok $USER, please open a new terminal tab, to run the added aliases\e[39m"
 
