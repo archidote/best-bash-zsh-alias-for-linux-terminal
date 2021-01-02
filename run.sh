@@ -11,9 +11,12 @@ alias p='sudo ping'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
 alias c='sudo clear'
+
+# alias added by bestAliasLinux (Brlndtech Edit)  
+alias d='date'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias e='sudo exit'
+alias e='exit'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
 alias uu='sudo apt update && apt upgrade'
