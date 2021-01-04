@@ -7,10 +7,10 @@ alias 1='sudo apt update && apt upgrade'
 alias 2='sudo apt autoremove && apt purge'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias p='sudo ping'
+alias p='ping'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias c='sudo clear'
+alias c='clear'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
 alias d='date'
