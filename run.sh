@@ -49,22 +49,22 @@ alias ..='sudo cd ..'
 alias b='sudo cd -'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias cda='sudo cd /var/www/html'
+alias cdw='cd /var/www/html'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias Gc='sudo git clone $1'
+alias Gc='git clone $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias ga='sudo git add .'
+alias ga='git add .'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias gs='sudo git status'
+alias gs='git status'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias gpom='sudo git push origin master'
+alias gpom='git push origin master'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias gpo='sudo git push origin $1'
+alias gpo='git push origin $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
 alias sr='sudo systemctl restart $1'
@@ -85,18 +85,15 @@ alias se='sudo systemctl enable $1'
 alias ch='sudo hostnamectl set-hostname $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit) 
-alias s='sudo sudo su'
+alias s='sudo su'
 
 # alias added by bestAliasLinux (Brlndtech Edit) 
-alias coder='sudo code --user-data-dir'
+alias pi='ping 1.1.1.1'
 
 # alias added by bestAliasLinux (Brlndtech Edit) 
-alias pi='sudo ping 1.1.1.1'
-
-# alias added by bestAliasLinux (Brlndtech Edit) 
-alias pii='sudo ping t.co'
+alias pii='ping t.co'
 
 EOF
 source $HOME/.bashrc
-echo -e "\e[92m it's ok $USER, please open a new terminal tab, to run the added aliases\e[39m"
+echo -e "\e[92m it's ok $USER, please open a new terminal tab, to run the added aliases. (In specific cases, reboot your machine to apply changes) \e[39m"
 
