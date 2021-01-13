@@ -28,25 +28,25 @@ alias jj='sudo apt autoremove'
 alias ai='sudo apt install'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias ap='sudo apt purge'
+alias nn='sudo apt purge'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
 alias l='sudo ls -alt'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias cdh='sudo cd $HOME'
+alias cdh='cd $HOME'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
 alias f='sudo find -name $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias fr='sudo find / -name $1'
+alias fn='sudo find / -name $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
 alias ..='sudo cd ..'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias b='sudo cd -'
+alias b='cd -'
  
 # alias added by bestAliasLinux (Brlndtech Edit)  
 alias cdw='cd /var/www/html'
@@ -73,7 +73,7 @@ alias sr='sudo systemctl restart $1'
 alias sss='sudo systemctl status $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias ssss='sudo systemctl start $1'
+alias strt'sudo systemctl start $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
 alias stp='sudo systemctl stop $1'
