@@ -73,7 +73,7 @@ alias sr='sudo systemctl restart $1'
 alias sss='sudo systemctl status $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
-alias strt"sudo systemctl start $1"
+alias strt='sudo systemctl start $1'
 
 # alias added by bestAliasLinux (Brlndtech Edit)  
 alias stp='sudo systemctl stop $1'
