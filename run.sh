@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ "$1" == "bash" ]; then
     cat >> $HOME/.bashrc << EOF
     # alias added by bestAliasLinux (Brlndtech Edit)  
