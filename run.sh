@@ -94,7 +94,7 @@ if [ "$1" == "bash" ]; then
     # alias added by bestAliasLinux (Brlndtech Edit) 
     alias pii='ping t.co'
 
-    EOF
+EOF
     source $HOME/.bashrc
     echo -e "\e[92m it's ok $USER, please open a new terminal tab, to run the added aliases. (In specific cases, reboot your machine to apply changes) \e[39m"
 else
@@ -192,7 +192,7 @@ else
     # alias added by bestAliasLinux (Brlndtech Edit) 
     alias pii='ping t.co'
 
-    EOF
+EOF
     source $HOME/.zshrc
     echo -e "\e[92m it's ok $USER, please open a new terminal tab, to run the added aliases. (In specific cases, reboot your machine to apply changes) \e[39m"
   fi
