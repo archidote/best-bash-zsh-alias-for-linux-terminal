@@ -7,5 +7,5 @@ sudo curl -sL https://raw.githubusercontent.com/brlndtech/bestAliasLinux/master/
 ```
 For zsh shell run : 
 ```
-sudo curl -sL https://raw.githubusercontent.com/brlndtech/bestAliasLinux/master/run.sh | zsh -c zsh
+sudo curl -sL https://raw.githubusercontent.com/brlndtech/bestAliasLinux/master/run.sh | bash -c zsh
 ```
