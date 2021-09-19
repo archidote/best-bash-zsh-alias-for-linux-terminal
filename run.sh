@@ -102,10 +102,10 @@ EOF
 if [ "$1" == "bash" ]; then
     echo "${aliases}" >> $HOME/.bashrc
     source $HOME/.bashrc
-    echo "Done"
+    echo "Done, open a new terminal"
 else
     echo "${aliases}" >> $HOME/.zshrc
     source $HOME/.bashrc
-    echo "Done"
+    echo "Done, open a new terminal"
 fi
 
