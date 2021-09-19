@@ -3,17 +3,17 @@ shell script executing by curl cmd to implement a list of predefined alias in th
 
 For bash shell run : 
 ```
-sudo curl -sL https://raw.githubusercontent.com/brlndtech/bestAliasLinux/master/run.sh | bash -s bash
+sudo curl -sL https://raw.githubusercontent.com/archidote/bestAliasLinux/master/run.sh | bash -s bash
 ```
 If you want to delete the aliases added my this project, run this command : 
 ```
-sudo curl -sL https://raw.githubusercontent.com/brlndtech/bestAliasLinux/master/delete.sh | bash -s bash
+sudo curl -sL https://raw.githubusercontent.com/archidote/bestAliasLinux/master/delete.sh | bash -s bash
 ```
 For zsh shell run : 
 ```
-sudo curl -sL https://raw.githubusercontent.com/brlndtech/bestAliasLinux/master/run.sh | bash -s zsh
+sudo curl -sL https://raw.githubusercontent.com/archidote/bestAliasLinux/master/run.sh | bash -s zsh
 ```
 If you want to delete the aliases added my this project, run this command : 
 ```
-sudo curl -sL https://raw.githubusercontent.com/brlndtech/bestAliasLinux/master/delete.sh | bash -s zsh
+sudo curl -sL https://raw.githubusercontent.com/archidote/bestAliasLinux/master/delete.sh | bash -s zsh
 ```
