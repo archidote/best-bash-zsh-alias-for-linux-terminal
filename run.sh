@@ -100,10 +100,12 @@ alias pii='ping t.co'
 EOF
 )
 if [ "$1" == "bash" ]; then
-	echo "${aliases}" >> $HOME/.bashrc
-	source $HOME/.bashrc
+    echo "${aliases}" >> $HOME/.bashrc
+    source $HOME/.bashrc
+    echo "Done"
 else
     echo "${aliases}" >> $HOME/.zshrc
     source $HOME/.bashrc
+    echo "Done"
 fi
 
