@@ -110,6 +110,9 @@ alias dlca='docker ps -a'
 alias ds='docker start $1'
 
 # alias added by bestAliasLinux  
+alias dss='docker stop $1'
+
+# alias added by bestAliasLinux  
 alias de='docker exec -it $1 bash'
 
 # alias added by bestAliasLinux  
