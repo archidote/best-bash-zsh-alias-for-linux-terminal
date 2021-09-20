@@ -53,7 +53,10 @@ alias ..='sudo cd ..'
 alias b='cd -'
  
 # alias added by bestAliasLinux   
-alias cdw='cd /var/www/html'
+alias cdw='cd /var/www/html/'
+
+# alias added by bestAliasLinux   
+alias cdl='cd /var/log/'
 
 # alias added by bestAliasLinux   
 alias Gc='git clone $1'
@@ -96,6 +99,31 @@ alias pi='ping 1.1.1.1'
 
 # alias added by bestAliasLinux  
 alias pii='ping t.co'
+
+# alias added by bestAliasLinux  
+alias dlc='docker ps'
+
+# alias added by bestAliasLinux  
+alias dlca='docker ps -a'
+
+# alias added by bestAliasLinux  
+alias ds='docker start $1'
+
+# alias added by bestAliasLinux  
+alias de='docker exec -it $1 bash'
+
+# alias added by bestAliasLinux  
+alias dr='docker run -d $1'
+
+# alias added by bestAliasLinux  
+alias dcda='docker rm -f $(docker ps -a -q)'
+
+# alias added by bestAliasLinux  
+alias dida='docker rmi -f $(docker images -q)'
+
+# alias added by bestAliasLinux  
+alias dli='docker images'
+
 # end_bestAliasLinux
 EOF
 )
@@ -103,9 +131,9 @@ if [ "$1" == "bash" ]; then
     echo "${aliases}" >> $HOME/.bashrc
     source $HOME/.bashrc
     echo "Done, open a new terminal"
-else
+elif [ "$1" == "zsh" ]; then
     echo "${aliases}" >> $HOME/.zshrc
-    source $HOME/.bashrc
+    source $HOME/.zshrc
     echo "Done, open a new terminal"
 fi
 
