@@ -16,6 +16,7 @@ alias p='ping'
  
 # alias added by bestAliasLinux   
 alias c='clear'
+
 # alias added by bestAliasLinux   
 alias d='date'
  
@@ -47,7 +48,7 @@ alias f='sudo find -name $1'
 alias fn='sudo find / -name $1'
 
 # alias added by bestAliasLinux   
-alias ..='sudo cd ..'
+alias ..='cd ..'
 
 # alias added by bestAliasLinux   
 alias b='cd -'
@@ -117,12 +118,6 @@ alias de='docker exec -it $1 bash'
 
 # alias added by bestAliasLinux  
 alias dr='docker run -d $1'
-
-# alias added by bestAliasLinux  
-alias dcda='docker rm -f $(docker ps -a -q)'
-
-# alias added by bestAliasLinux  
-alias dida='docker rmi -f $(docker images -q)'
 
 # alias added by bestAliasLinux  
 alias dli='docker images'
