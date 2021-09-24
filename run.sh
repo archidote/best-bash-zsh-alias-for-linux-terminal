@@ -38,7 +38,7 @@ alias l='sudo ls -alt'
 alias cdh='cd $HOME'
 
 # alias added by bestAliasLinux   
-alias f='sudo find -name $1'
+alias f="sudo find -name \$1\"
 
 # alias added by bestAliasLinux   
 alias fn='sudo find / -name $1'
