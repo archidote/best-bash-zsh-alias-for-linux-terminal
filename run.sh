@@ -126,10 +126,12 @@ alias dli='docker images'
 EOF
 )
 if [ "$1" == "bash" ]; then
+    shift
     echo "${aliases}" >> $HOME/.bashrc
     source $HOME/.bashrc
     echo "Done, open a new terminal"
 elif [ "$1" == "zsh" ]; then
+    shift
     echo "${aliases}" >> $HOME/.zshrc
     source $HOME/.zshrc
     echo "Done, open a new terminal"
