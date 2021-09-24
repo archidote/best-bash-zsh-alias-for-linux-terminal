@@ -110,7 +110,7 @@ alias ds="docker start \$1"
 alias dss="docker stop \$1"
 
 # alias added by bestAliasLinux  
-alias de="docker exec -it \$1 bash"
+alias de="docker exec -it \$1"
 
 # alias added by bestAliasLinux  
 alias dr="docker run -d \$1"
