@@ -38,10 +38,10 @@ alias l="sudo ls -alt"
 alias cdh="cd $HOME"
 
 # alias added by bestAliasLinux   
-alias f="sudo find -name $1"
+alias f="sudo find -name \$1"
 
 # alias added by bestAliasLinux   
-alias fn="sudo find / -name $1"
+alias fn="sudo find / -name \$1"
 
 # alias added by bestAliasLinux   
 alias ..="cd .."
@@ -56,7 +56,7 @@ alias cdw="cd /var/www/html/"
 alias cdl="cd /var/log/"
 
 # alias added by bestAliasLinux   
-alias Gc="git clone $1"
+alias Gc="git clone \$1"
 
 # alias added by bestAliasLinux   
 alias ga="git add ."
@@ -68,25 +68,25 @@ alias gs="git status"
 alias gpom="git push origin master"
 
 # alias added by bestAliasLinux   
-alias gpo="git push origin $1"
+alias gpo="git push origin \$1"
 
 # alias added by bestAliasLinux   
-alias sr="sudo systemctl restart $1"
+alias sr="sudo systemctl restart \$1"
 
 # alias added by bestAliasLinux   
-alias sss="sudo systemctl status $1"
+alias sss="sudo systemctl status \$1"
 
 # alias added by bestAliasLinux   
-alias strt="sudo systemctl start $1"
+alias strt="sudo systemctl start \$1"
 
 # alias added by bestAliasLinux   
-alias stp="sudo systemctl stop $1"
+alias stp="sudo systemctl stop \$1"
 
 # alias added by bestAliasLinux   
-alias se="sudo systemctl enable $1"
+alias se="sudo systemctl enable \$1"
 
 # alias added by bestAliasLinux   
-alias ch="sudo hostnamectl set-hostname $1"
+alias ch="sudo hostnamectl set-hostname \$1"
 
 # alias added by bestAliasLinux  
 alias s="sudo su"
@@ -104,16 +104,16 @@ alias dlc="docker ps"
 alias dlca="docker ps -a"
 
 # alias added by bestAliasLinux  
-alias ds="docker start $1"
+alias ds="docker start \$1"
 
 # alias added by bestAliasLinux  
-alias dss="docker stop $1"
+alias dss="docker stop \$1"
 
 # alias added by bestAliasLinux  
-alias de="docker exec -it $1 bash"
+alias de="docker exec -it \$1 bash"
 
 # alias added by bestAliasLinux  
-alias dr="docker run -d $1"
+alias dr="docker run -d \$1"
 
 # alias added by bestAliasLinux  
 alias dli="docker images"
