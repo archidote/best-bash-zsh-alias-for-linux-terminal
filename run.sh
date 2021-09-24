@@ -1,8 +1,4 @@
 #!/bin/bash
-if [ $# -eq 0 ]
-  then
-    echo "No arguments supplied, please choose one of them : bash or zsh"
-fi
 aliases=$(cat <<EOF
 # start_bestAliasLinux
 # alias added by bestAliasLinux   
@@ -125,7 +121,10 @@ alias dli='docker images'
 # end_bestAliasLinux
 EOF
 )
-if [ "$1" == "bash" ]; then
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied, please choose one of them : bash or zsh"
+elif [ "$1" == "bash" ]; then
     shift
     echo "${aliases}" >> $HOME/.bashrc
     source $HOME/.bashrc
