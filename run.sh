@@ -32,13 +32,7 @@ alias ai="sudo apt install"
 alias nn="sudo apt purge"
  
 # alias added by bestAliasLinux   
-alias l="sudo ls -alt"
-
-# alias added by bestAliasLinux   
-alias cdh="cd $HOME"
-
-# alias added by bestAliasLinux   
-alias f="sudo find -name \$1"
+alias l="ls -alt"
 
 # alias added by bestAliasLinux   
 alias fn="sudo find / -name \$1"
