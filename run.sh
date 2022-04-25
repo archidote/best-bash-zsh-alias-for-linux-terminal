@@ -35,6 +35,12 @@ alias nn="sudo apt purge"
 alias l="ls -alt"
 
 # alias added by bestAliasLinux   
+alias h="history"
+
+# alias added by bestAliasLinux   
+alias h-="history | grep "\$1""
+
+# alias added by bestAliasLinux   
 alias fn="sudo find / -name \$1"
 
 # alias added by bestAliasLinux   
