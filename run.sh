@@ -118,6 +118,21 @@ alias dr="docker run -d \$1"
 # alias added by bestAliasLinux  
 alias dli="docker images"
 
+# alias added by bestAliasLinux  
+alias google="xdg-open 'https://www.google.fr/search?q='$(echo $1 | tr ' ' '+') > /dev/null &"
+
+# alias added by bestAliasLinux  
+alias o='xdg-open'
+
+# alias added by bestAliasLinux  
+alias m='make re && make clean'
+
+# alias added by bestAliasLinux  
+alias new='gnome-terminal'
+
+# alias added by bestAliasLinux  
+alias diskspace="du -S | sort -n -r | more"
+
 # end_bestAliasLinux
 EOF
 )
