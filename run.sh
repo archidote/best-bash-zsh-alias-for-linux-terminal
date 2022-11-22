@@ -47,6 +47,9 @@ alias fn="sudo find / -name \$1"
 alias ..="cd .."
 
 # alias added by bestAliasLinux   
+alias bb="cd .."
+
+# alias added by bestAliasLinux   
 alias b="cd -"
  
 # alias added by bestAliasLinux   
@@ -132,6 +135,9 @@ alias new='gnome-terminal'
 
 # alias added by bestAliasLinux  
 alias diskspace="du -S | sort -n -r | more"
+
+# alias added by bestAliasLinux  
+alias mip="curl ifconfig.me/ip"
 
 # end_bestAliasLinux
 EOF
