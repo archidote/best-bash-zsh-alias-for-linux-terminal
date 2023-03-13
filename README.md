@@ -1,5 +1,8 @@
 # Best alias for linux terminal 
-shell script executing by curl cmd to implement a list of predefined alias for the current .bashrc/.zshrc user's, to save time, when you rush your terminal. 
+
+*Save time, when you rush your terminal.*
+
+shell script executing by <code>curl</code> to install a list of predefined alias for the current .bashrc/.zshrc user's. </br>
 
 <b> Dont' forget to re-open a new terminal after script execution no matter the shell type</b>
 
@@ -17,12 +20,12 @@ curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-termin
 
 # Delete 
 ## bash
-If you want to delete the aliases added my this project, run this command : 
+If you want to delete the aliases added by this project, run : 
 ```
 curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s bash
 ```
 ## zsh
-If you want to delete the aliases added my this project, run this command : 
+If you want to delete the aliases added by this project, run :
 ```
 curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s zsh > /dev/null 2>&1
 ```
@@ -31,4 +34,4 @@ curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-termin
 
 # Update 
 
-Delete, and re-run the inital setup with curl according to you shell family 
+Delete, and re-run the inital setup with curl according to your shell type
