@@ -1,5 +1,7 @@
 # Best alias for linux terminal 
-shell script executing by curl cmd to implement a list of predefined alias in the current <b>root</b> .bashrc/.zshrc, to save time, when you rush your terminal. 
+shell script executing by curl cmd to implement a list of predefined alias for the current .bashrc/.zshrc user's, to save time, when you rush your terminal. 
+
+<b> Dont' forget to re-open a new terminal after script execution no matter the shell type</b>
 
 # Install and and auto configure 
 
