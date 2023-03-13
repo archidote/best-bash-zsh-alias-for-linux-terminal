@@ -9,7 +9,7 @@ curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-termin
 ```
 ## zsh
 ```
-curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/install.sh | bash -s zsh > /dev/null
+curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/install.sh | bash -s zsh > /dev/null 2>&1
 ```
 <br>
 
@@ -22,7 +22,7 @@ curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-termin
 ## zsh
 If you want to delete the aliases added my this project, run this command : 
 ```
-curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s zsh > /dev/null
+curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s zsh > /dev/null 2>&1
 ```
 
 <br>
