@@ -5,7 +5,7 @@ shell script executing by curl cmd to implement a list of predefined alias in th
 
 ## bash
 ```
-curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/run.sh | bash -s bash > /dev/null
+curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/run.sh | bash -s bash
 ```
 ## zsh
 ```
@@ -17,7 +17,7 @@ curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-termin
 ## bash
 If you want to delete the aliases added my this project, run this command : 
 ```
-curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s bash > /dev/null
+curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s bash
 ```
 ## zsh
 If you want to delete the aliases added my this project, run this command : 
