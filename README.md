@@ -5,11 +5,11 @@ shell script executing by curl cmd to implement a list of predefined alias in th
 
 ## bash
 ```
-curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/run.sh | bash -s bash
+curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/install.sh | bash -s bash
 ```
 ## zsh
 ```
-curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/run.sh | bash -s zsh > /dev/null 2>&1
+curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/install.sh | bash -s zsh > /dev/null 2>&1
 ```
 <br>
 
