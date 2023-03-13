@@ -1,6 +1,7 @@
 #!/bin/bash
 aliases=$(cat <<EOF
-# start_bestAliasLinux
+
+########## start_bestAliasLinux ##########
 
 alias 1="sudo apt update && apt upgrade"
 alias 2="sudo apt autoremove && apt purge"
@@ -42,15 +43,16 @@ alias de="docker exec -it \$1"
 alias dr="docker run -d \$1"
 alias dli="docker images"
 alias google="xdg-open 'https://www.google.fr/search?q='$(echo $1 | tr ' ' '+') > /dev/null &"
-alias o='xdg-open'
-alias m='make re && make clean'
-alias new='gnome-terminal
+alias o="xdg-open"
+alias m="make re && make clean"
+alias new="gnome-terminal"
 alias diskspace="du -S | sort -n -r | more"
 alias mip="curl ifconfig.me/ip"
 alias venv="python3 -m venv venv"
 alias av="source venv/bin/activate"
 
-# end_bestAliasLinux
+######### end_bestAliasLinux ########## 
+
 EOF
 )
 if [ $# -eq 0 ]
