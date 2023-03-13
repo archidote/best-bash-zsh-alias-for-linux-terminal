@@ -63,12 +63,10 @@ elif [ "$1" == "bash" ]; then
     echo "${aliases}" >> $HOME/.bashrc
     source $HOME/.bashrc 
     echo "Done ! Open a new terminal"
-    sleep 3
 elif [ "$1" == "zsh" ]; then
     shift
     echo "${aliases}" >> $HOME/.zshrc 
     source $HOME/.zshrc 
     echo "Done ! Open a new terminal"
-    sleep 3 
 fi
 
