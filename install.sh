@@ -50,6 +50,7 @@ alias diskspace="du -S | sort -n -r | more"
 alias mip="curl ifconfig.me/ip"
 alias venv="python3 -m venv venv"
 alias av="source venv/bin/activate"
+alias dns='sudo sh -c "echo '\''nameserver 1.1.1.1\nnameserver 8.8.8.8'\'' > /etc/resolv.conf"'
 
 ######### end_bestAliasLinux ########## 
 
