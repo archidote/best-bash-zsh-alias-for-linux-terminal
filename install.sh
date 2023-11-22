@@ -3,10 +3,9 @@ aliases=$(cat <<EOF
 
 ########## start_bestAliasLinux ##########
 
-alias 1="sudo apt update && apt upgrade"
-alias 2="sudo apt autoremove && apt purge"
 alias p="ping"
-alias c="clear"
+alias c="clear -x"
+alias ccc="clear"
 alias d="date"
 alias e="exit"
 alias uu="sudo apt update && apt upgrade"
