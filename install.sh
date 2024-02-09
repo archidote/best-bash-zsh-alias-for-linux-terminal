@@ -38,6 +38,7 @@ alias dlc="docker ps"
 alias dlca="docker ps -a"
 alias ds="docker start \$1"
 alias dss="docker stop \$1"
+alias dk="docker kill \$1"
 alias de="docker exec -it \$1"
 alias dr="docker run -d \$1"
 alias dli="docker images"
@@ -51,6 +52,8 @@ alias venv="python3 -m venv venv"
 alias av="source venv/bin/activate"
 alias dns='sudo sh -c "echo '\''nameserver 1.1.1.1\nnameserver 8.8.8.8'\'' > /etc/resolv.conf"'
 alias ipa='ip --brief --color a'
+alias n='nautilus .'
+alias x='xdg-open .'
 ######### end_bestAliasLinux ########## 
 
 EOF
