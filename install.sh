@@ -4,7 +4,10 @@ aliases=$(cat <<EOF
 ########## start_bestAliasLinux ##########
 
 alias p="ping"
+alias pi="ping 1.1.1.1"
+alias pii="ping t.co"
 alias c="clear -x"
+alias s="sudo su"
 alias ccc="clear"
 alias d="date"
 alias e="exit"
@@ -31,9 +34,6 @@ alias strt="sudo systemctl start \$1"
 alias stp="sudo systemctl stop \$1"
 alias se='sudo systemctl enable \$1'
 alias ch="sudo hostnamectl set-hostname \$1"
-alias s="sudo su"
-alias pi="ping 1.1.1.1"
-alias pii="ping t.co"
 alias dlc="docker ps"
 alias dlca="docker ps -a"
 alias ds="docker start \$1"
@@ -41,6 +41,8 @@ alias dss="docker stop \$1"
 alias dk="docker kill \$1"
 alias de="docker exec -it \$1"
 alias dr="docker run -d \$1"
+alias drc="docker rm -f \$@"
+alias dri="docker rmi -f\$@"
 alias dli="docker images"
 alias google="xdg-open 'https://www.google.fr/search?q='$(echo $1 | tr ' ' '+') > /dev/null &"
 alias o="xdg-open"
@@ -50,10 +52,19 @@ alias diskspace="du -S | sort -n -r | more"
 alias mip="curl ifconfig.me/ip"
 alias venv="python3 -m venv venv"
 alias av="source venv/bin/activate"
+alias pir="python3 -m pip install -r requirements.txt"
 alias dns='sudo sh -c "echo '\''nameserver 1.1.1.1\nnameserver 8.8.8.8'\'' > /etc/resolv.conf"'
 alias ipa='ip --brief --color a'
 alias n='nautilus .'
 alias x='xdg-open .'
+alias src="source $HOME/$(basename $0)"
+alias be="base64 <<<"
+alias bd="base64 -d <<<"
+### global env ###
+setopt share_history
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+eval "$(jump shell)"
 ######### end_bestAliasLinux ########## 
 
 EOF
