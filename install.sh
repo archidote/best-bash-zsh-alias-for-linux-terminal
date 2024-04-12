@@ -57,6 +57,13 @@ alias dns='sudo sh -c "echo '\''nameserver 1.1.1.1\nnameserver 8.8.8.8'\'' > /et
 alias ipa='ip --brief --color a'
 alias n='nautilus .'
 alias x='xdg-open .'
+alias be="base64 <<<"
+alias bd="base64 -d <<<"
+alias n="nano $1"
+### global env ###
+setopt share_history
+export HISTSIZE=100000
+export HISTFILESIZE=100000
 ######### end_bestAliasLinux ########## 
 
 EOF
