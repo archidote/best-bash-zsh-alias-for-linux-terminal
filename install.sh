@@ -60,6 +60,7 @@ alias x='xdg-open .'
 alias src="source $HOME/$(basename $0)"
 alias be="base64 <<<"
 alias bd="base64 -d <<<"
+alias n="nano $1"
 ### global env ###
 setopt share_history
 export HISTSIZE=100000
