@@ -63,9 +63,14 @@ alias be="base64 <<<"
 alias bd="base64 -d <<<"
 alias n="nano $1"
 ### global env ###
-setopt share_history
-export HISTSIZE=100000
-export HISTFILESIZE=100000
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 ######### end_bestAliasLinux ########## 
 
 EOF
