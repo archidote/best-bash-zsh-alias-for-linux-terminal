@@ -12,9 +12,9 @@ alias ccc="clear"
 alias d="date"
 alias e="exit"
 alias uu="sudo apt update && apt upgrade"
+alias jr="sudo apt remove $1"
 alias jj="sudo apt autoremove"
 alias ai="sudo apt install"
-alias nn="sudo apt purge"
 alias l="ls -alt"
 alias h="history"
 alias h-="history | grep "\$1""
@@ -62,6 +62,7 @@ alias filer='nautilus . &'
 alias be="base64 <<<"
 alias bd="base64 -d <<<"
 alias n="nano $1"
+alias src="source "/home/$USER/.$(ps -p $$ | grep sh | awk '{print $4}')rc"
 ### global env ###
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
