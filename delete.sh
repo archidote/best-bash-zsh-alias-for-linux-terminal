@@ -8,14 +8,14 @@ fi
 if [ "$1" == "bash" ]; then
     sed -i '/start_bestAliasLinux/,/end_bestAliasLinux/d' "$HOME/.bashrc"
     if [ $? -eq 0 ]; then
-        echo "Done! Open a new terminal or run: source ~/.bashrc"
+        echo "Done! Open a new terminal and run: source ~/.bashrc"
     else
         echo "Unexpected error"
     fi
 elif [ "$1" == "zsh" ]; then
     sed -i '/start_bestAliasLinux/,/end_bestAliasLinux/d' "$HOME/.zshrc"
     if [ $? -eq 0 ]; then
-        echo "Done! Open a new terminal or run: source ~/.zshrc (in a zsh shell)"
+        echo "Done! Open a new terminal and run: source ~/.zshrc (in a zsh shell)"
     else
         echo "Unexpected error"
     fi
