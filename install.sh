@@ -1,4 +1,5 @@
 #!/bin/bash
+
 aliases=$(cat <<EOF
 
 ########## start_bestAliasLinux ##########
@@ -12,12 +13,12 @@ alias ccc="clear"
 alias d="date"
 alias e="exit"
 alias uu="sudo apt update && apt upgrade"
-alias jr="sudo apt remove $1"
+alias jr="sudo apt remove \$1"
 alias jj="sudo apt autoremove"
 alias ai="sudo apt install"
 alias l="ls -alt"
 alias h="history"
-alias h-="history | grep "\$1""
+alias h-="history | grep \"\$1\""
 alias fn="sudo find / -name \$1"
 alias ..="cd .."
 alias b="cd -"
@@ -32,7 +33,7 @@ alias sr="sudo systemctl restart \$1"
 alias sss="sudo systemctl status \$1"
 alias strt="sudo systemctl start \$1"
 alias stp="sudo systemctl stop \$1"
-alias se='sudo systemctl enable \$1'
+alias se="sudo systemctl enable \$1"
 alias ch="sudo hostnamectl set-hostname \$1"
 alias dlc="docker ps"
 alias dlca="docker ps -a"
@@ -42,9 +43,9 @@ alias dk="docker kill \$1"
 alias de="docker exec -it \$1"
 alias dr="docker run -d \$1"
 alias drc="docker rm -f \$@"
-alias dri="docker rmi -f\$@"
+alias dri="docker rmi -f \$@"
 alias dli="docker images"
-alias google="xdg-open 'https://www.google.fr/search?q='$(echo $1 | tr ' ' '+') > /dev/null &"
+alias google="xdg-open 'https://www.google.fr/search?q='\$(echo \$1 | tr ' ' '+') > /dev/null &"
 alias o="xdg-open"
 alias m="make re && make clean"
 alias new="gnome-terminal"
@@ -56,14 +57,16 @@ alias mipp6="curl icanhazip.com -6"
 alias venv="python3 -m venv venv"
 alias av="source venv/bin/activate"
 alias pir="python3 -m pip install -r requirements.txt"
-alias dns='sudo sh -c "echo '\''nameserver 1.1.1.1\nnameserver 8.8.8.8'\'' > /etc/resolv.conf"'
+alias dns='sudo sh -c "echo \"nameserver 1.1.1.1\nnameserver 8.8.8.8\" > /etc/resolv.conf"'
 alias ipa='ip --brief --color a'
 alias filer='nautilus . &'
 alias be="base64 <<<"
 alias bd="base64 -d <<<"
-alias n="nano $1"
-alias src="source "/home/$USER/.$(ps -p $$ | grep sh | awk '{print $4}')rc"
+alias n="nano \$1"
+alias src="source \"/home/\$USER/.\$(ps -p \$\$ | grep sh | awk '{print \$4}')rc\""
+
 ### global env ###
+
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
@@ -72,21 +75,20 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 export HISTSIZE=10000
 export HISTFILESIZE=10000
+
 ######### end_bestAliasLinux ########## 
 
 EOF
 )
-if [ $# -eq 0 ]
-  then
-    echo "No arguments supplied, please choose one of them : bash or zsh"
+
+if [ $# -eq 0 ]; then
+    echo "No arguments supplied, please choose one of them: bash or zsh"
 elif [ "$1" == "bash" ]; then
-    shift
-    echo "${aliases}" >> $HOME/.bashrc
-    source $HOME/.bashrc 
-    echo "Done ! Open a new terminal"
+    echo "${aliases}" >> "$HOME/.bashrc"
+    echo "Done! Open a new terminal or run: source ~/.bashrc"
 elif [ "$1" == "zsh" ]; then
-    shift
-    echo "${aliases}" >> $HOME/.zshrc 
-    source $HOME/.zshrc 
-    echo "Done ! Open a new terminal"
+    echo "${aliases}" >> "$HOME/.zshrc"
+    echo "Done! Open a new terminal or run: source ~/.zshrc"
+else
+    echo "Unknown argument: $1 (expected bash or zsh)"
 fi
