@@ -3,7 +3,6 @@
 alias_global=$(cat <<'EOF'
 
 ########## start_bestAliasLinux ##########
-
 alias p="ping"
 alias pi="ping 1.1.1.1"
 alias pii="ping t.co"
@@ -71,7 +70,6 @@ EOF
 alias_zsh=$(cat <<'EOF'
 
 ### Zsh-specific options ###
-
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
@@ -80,7 +78,6 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 export HISTSIZE=10000
 export HISTFILESIZE=10000
-
 ########## end_bestAliasLinux ##########
 
 EOF
@@ -89,12 +86,10 @@ EOF
 alias_bash=$(cat <<'EOF'
 
 ### Bash-specific options ###
-
 shopt -s histappend
 export HISTCONTROL=ignoredups:ignorespace
 export HISTSIZE=10000
 export HISTFILESIZE=10000
-
 ########## end_bestAliasLinux ##########
 
 EOF
