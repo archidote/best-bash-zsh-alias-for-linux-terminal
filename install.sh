@@ -28,7 +28,7 @@ alias cdl="cd /var/log/"
 alias Gc="git clone \$1"
 alias ga="git add ."
 alias gs="git status"
-alias gpom="git push origin master"
+alias gpom="git push origin main"
 alias gpo="git push origin \$1"
 alias sr="sudo systemctl restart \$1"
 alias sss="sudo systemctl status \$1"
@@ -102,16 +102,12 @@ EOF
 if [ $# -eq 0 ]; then
     echo "No arguments supplied, please choose one of them: bash or zsh"
 elif [ "$1" == "bash" ]; then
-    {
-      echo "$alias_global"
-      echo "$alias_bash"
-    } >> "$HOME/.bashrc"
+      echo "$alias_global" >> "$HOME/.bashrc"
+      echo "$alias_bash" >> "$HOME/.bashrc"
     echo "Done! Open a new terminal or run: source ~/.bashrc"
 elif [ "$1" == "zsh" ]; then
-    {
-      echo "$alias_global"
-      echo "$alias_zsh"
-    } >> "$HOME/.zshrc"
+      echo "$alias_global" >> "$HOME/.zshrc"
+      echo "$alias_zsh" >> "$HOME/.zshrc"
     echo "Done! Open a new terminal or run: source ~/.zshrc"
 else
     echo "Unknown argument: $1 (expected bash or zsh)"
