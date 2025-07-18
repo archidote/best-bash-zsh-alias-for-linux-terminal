@@ -1,33 +1,42 @@
-# Best alias for linux terminal 
+# Best Aliases for Linux Terminal
 
-*Save time, when you rush your terminal.*
+*Save time when you’re in a hurry at the terminal.*
 
-shell script executing by <code>curl</code> to install a list of predefined alias for the current .bashrc/.zshrc user's. </br>
+This shell script can be executed via `curl` to install a set of predefined aliases into the user’s `~/.bashrc` or `~/.zshrc` files.
 
-<b> Dont' forget to re-open a new terminal after script execution no matter the shell type</b>
 
 # Install and and auto configure 
 
 ## bash
-```
+
+```bash
+bash
 curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/install.sh | bash -s bash
 ```
 ## zsh
-```
-curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/install.sh | bash -s zsh > /dev/null 2>&1
+
+```zsh
+zsh
+curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/install.sh | bash -s zsh
 ```
 <br>
 
 # Delete 
+
 ## bash
-If you want to delete the aliases added by this project, run : 
-```
+If you want to delete the aliases added by this project, run :
+
+```bash
+bash
 curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s bash
 ```
 ## zsh
+
 If you want to delete the aliases added by this project, run :
-```
-curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s zsh > /dev/null 2>&1
+
+```zsh
+zsh
+curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s zsh
 ```
 
 <br>
