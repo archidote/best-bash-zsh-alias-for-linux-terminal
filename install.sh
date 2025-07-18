@@ -1,6 +1,6 @@
 #!/bin/bash
 
-aliases=$(cat <<EOF
+alias_global=$(cat <<EOF
 
 ########## start_bestAliasLinux ##########
 
@@ -65,8 +65,14 @@ alias bd="base64 -d <<<"
 alias n="nano \$1"
 alias src="source \"/home/\$USER/.\$(ps -p \$\$ | grep sh | awk '{print \$4}')rc\""
 
-### global env ###
+######### end_bestAliasLinux ########## 
 
+EOF
+)
+
+alias_zsh=$(cat <<EOF
+
+### Zsh-specific options ###
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
@@ -76,7 +82,16 @@ setopt HIST_REDUCE_BLANKS
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 
-######### end_bestAliasLinux ########## 
+EOF
+)
+
+alias_bash=$(cat <<EOF
+
+### Bash-specific options ###
+shopt -s histappend
+export HISTCONTROL=ignoredups:ignorespace
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 
 EOF
 )
@@ -84,10 +99,12 @@ EOF
 if [ $# -eq 0 ]; then
     echo "No arguments supplied, please choose one of them: bash or zsh"
 elif [ "$1" == "bash" ]; then
-    echo "${aliases}" >> "$HOME/.bashrc"
+    echo "$alias_global" >> "$HOME/.bashrc"
+    echo "$alias_bash" >> "$HOME/.bashrc"
     echo "Done! Open a new terminal or run: source ~/.bashrc"
 elif [ "$1" == "zsh" ]; then
-    echo "${aliases}" >> "$HOME/.zshrc"
+    echo "$alias_global" >> "$HOME/.zshrc"
+    echo "$alias_zsh" >> "$HOME/.zshrc"
     echo "Done! Open a new terminal or run: source ~/.zshrc"
 else
     echo "Unknown argument: $1 (expected bash or zsh)"
