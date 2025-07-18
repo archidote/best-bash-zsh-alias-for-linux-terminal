@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Bloc commun + header (sans fin)
 alias_global=$(cat <<'EOF'
 
 ########## start_bestAliasLinux ##########
@@ -72,6 +71,7 @@ EOF
 alias_zsh=$(cat <<'EOF'
 
 ### Zsh-specific options ###
+
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
@@ -89,6 +89,7 @@ EOF
 alias_bash=$(cat <<'EOF'
 
 ### Bash-specific options ###
+
 shopt -s histappend
 export HISTCONTROL=ignoredups:ignorespace
 export HISTSIZE=10000
