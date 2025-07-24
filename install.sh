@@ -64,6 +64,14 @@ alias bd="base64 -d <<<"
 alias n="nano \$1"
 alias src="source \"/home/\$USER/.\$(ps -p \$\$ | grep sh | awk '{print \$4}')rc\""
 
+lr() {
+  local cmd="$@"
+  local safe_cmd="${cmd//[^a-zA-Z0-9_]/_}"
+  local log_file="${safe_cmd}.log"
+
+  script -qc "$cmd" /dev/null | tee -a "$log_file"
+}
+
 EOF
 )
 
