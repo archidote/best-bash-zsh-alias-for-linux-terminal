@@ -5,7 +5,9 @@ alias_global=$(cat <<'EOF'
 ########## start_bestAliasLinux ##########
 alias p="ping"
 alias pi="ping 1.1.1.1"
+alias pi8="ping 8.8.8.8"
 alias pii="ping t.co"
+alias piii="ping google.com"
 alias c="clear -x"
 alias s="sudo su"
 alias ccc="clear"
@@ -17,8 +19,6 @@ alias jj="sudo apt autoremove"
 alias ai="sudo apt install"
 alias l="ls -alt"
 alias h="history"
-alias h-="history | grep \"\$1\""
-alias fn='sudo find / -name "*\$1*"'
 alias ..="cd .."
 alias b="cd -"
 alias listening_local_int_tcp_udp="sudo ss -tlnp"
@@ -29,7 +29,6 @@ alias ls_bind_permanent_socket_port_tcp="sudo ss -tnlp"
 alias ls_bind_permanent_socket_port_udp="sudo ss -tunlp"
 alias cdw="cd /var/www/html/"
 alias cdl="cd /var/log/"
-alias Gc="git clone \$1"
 alias ga="git add ."
 alias gs="git status"
 alias gpom="git push origin main"
@@ -53,14 +52,14 @@ alias dli="docker images"
 alias google="xdg-open 'https://www.google.fr/search?q='\$(echo \$1 | tr ' ' '+') > /dev/null &"
 alias o="xdg-open"
 alias m="make re && make clean"
-alias new="gnome-terminal"
-alias diskspace="du -S | sort -n -r | more"
+alias new="tilix"
 alias mip="curl ifconfig.me/ip -4"
 alias mipp="curl icanhazip.com -4"
 alias mip6="curl ifconfig.me/ip -6"
 alias mipp6="curl icanhazip.com -6"
 alias venv="python3 -m venv venv"
 alias av="source venv/bin/activate"
+alias av.="source .venv/bin/activate"
 alias pir="python3 -m pip install -r requirements.txt"
 alias dns='sudo sh -c "echo \"nameserver 1.1.1.1\nnameserver 8.8.8.8\" > /etc/resolv.conf"'
 alias ipa='ip --brief --color a'
@@ -74,6 +73,10 @@ lr() {
   local safe_cmd="${cmd//[^a-zA-Z0-9_]/_}"
   local log_file="${safe_cmd}_$(date +%Y%m%d%H%M%S).log"
   script -qc "$cmd" /dev/null | tee -a "$log_file"
+}
+
+fn() { 
+    sudo find / -name "*$1*"
 }
 
 EOF
