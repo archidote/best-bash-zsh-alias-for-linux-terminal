@@ -71,15 +71,28 @@ alias bd="base64 -d <<<"
 alias n="nano \$1"
 
 lr() {
-  local cmd="$@"
-  local safe_cmd="${cmd//[^a-zA-Z0-9_]/_}"
-  local log_file="${safe_cmd}_$(date +%Y%m%d%H%M%S).log"
+  cmd="$@"
+  safe_cmd="${cmd//[^a-zA-Z0-9_]/_}"
+  folder="/workspace"
+
+  if [ -n "$folder" ]; then
+    mkdir -p "$folder"
+    log_file="${folder}/$(date +%Y%m%d%H%M%S)_${safe_cmd}.log"
+  else
+    log_file="$(date +%Y%m%d%H%M%S)_${safe_cmd}.log"
+  fi
+
   script -qc "$cmd" /dev/null | tee -a "$log_file"
 }
 
-fn() { 
+ff() { 
+    if [ -z "$1" ]; then
+        echo "Usage: ff <pattern>"
+        return 1
+    fi
     sudo find / -name "*$1*"
 }
+
 
 EOF
 )
