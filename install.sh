@@ -71,18 +71,13 @@ alias bd="base64 -d <<<"
 alias n="nano \$1"
 
 lr() {
-  cmd="$@"
+  cmd="$*"
   safe_cmd="${cmd//[^a-zA-Z0-9_]/_}"
-  folder="/workspace"
+  folder="/workspace/_logs"
+  mkdir -p "$folder"
 
-  if [ -n "$folder" ]; then
-    mkdir -p "$folder"
-    log_file="${folder}/$(date +%Y%m%d%H%M%S)_${safe_cmd}.log"
-  else
-    log_file="$(date +%Y%m%d%H%M%S)_${safe_cmd}.log"
-  fi
-
-  script -qc "$cmd" /dev/null | tee -a "$log_file"
+  log_file="${folder}/$(date +%Y-%m-%d-%H-%M-%S)_${safe_cmd}.log"
+  script -q -c "zsh -ic 'setopt NO_NOMATCH; ${cmd//\'/\'\\\'\'}'" /dev/null | tee -a "$log_file"
 }
 
 ff() { 
