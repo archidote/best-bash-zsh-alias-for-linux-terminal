@@ -85,9 +85,8 @@ ff() {
         echo "Usage: ff <pattern>"
         return 1
     fi
-    sudo find / -name "*$1*"
+    find . -name "*$1*" | grep -i "$1"
 }
-
 
 EOF
 )
