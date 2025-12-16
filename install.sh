@@ -72,12 +72,22 @@ alias n="nano \$1"
 
 lr() {
   cmd="$*"
+
+  # sécurise le nom du fichier
   safe_cmd="${cmd//[^a-zA-Z0-9_]/_}"
-  folder="/workspace/_logs"
+
+  # jour de la semaine en anglais
+  day="$(date +%A | tr '[:upper:]' '[:lower:]')"
+
+  base_folder="/workspace/_logs"
+  folder="${base_folder}/${day}"
+
   mkdir -p "$folder"
 
   log_file="${folder}/$(date +%Y-%m-%d-%H-%M-%S)_${safe_cmd}.log"
-  script -q -c "zsh -ic 'setopt NO_NOMATCH; ${cmd//\'/\'\\\'\'}'" /dev/null | tee -a "$log_file"
+
+  script -q -c "zsh -ic 'setopt NO_NOMATCH; ${cmd//\'/\'\\\'\'}'" /dev/null \
+    | tee -a "$log_file"
 }
 
 ff() { 
@@ -85,7 +95,7 @@ ff() {
         echo "Usage: ff <pattern>"
         return 1
     fi
-    find . -name "*$1*" | grep -i "$1"
+    find . -iname "*$1*" | grep -i "$1"
 }
 
 EOF

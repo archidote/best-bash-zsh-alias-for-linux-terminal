@@ -9,12 +9,12 @@ This shell script can be executed via `curl` to install a set of predefined alia
 
 ## bash
 
-```bash
+```
 curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/install.sh | bash -s bash
 ```
 ## zsh
 
-```zsh
+```
 curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/install.sh | bash -s zsh
 ```
 <br>
@@ -24,14 +24,14 @@ curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-termin
 ## bash
 If you want to delete the aliases added by this project, run :
 
-```bash
+```
 curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s bash
 ```
 ## zsh
 
 If you want to delete the aliases added by this project, run :
 
-```zsh
+```
 curl -sL https://raw.githubusercontent.com/archidote/best-alias-for-linux-terminal/master/delete.sh | bash -s zsh
 ```
 
