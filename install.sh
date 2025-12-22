@@ -3,6 +3,7 @@
 alias_global=$(cat <<'EOF'
 
 ########## start_bestAliasLinux ##########
+
 alias p="ping"
 alias pi="ping 1.1.1.1"
 alias pi8="ping 8.8.8.8"
@@ -97,6 +98,16 @@ ff() {
     fi
     find . -iname "*$1*" | grep -i "$1"
 }
+
+export USER=""
+export PASSWORD=""
+export DC=""
+export DC1=""
+export DC2=""
+export DC3=""
+export DOMAIN=""
+export DOM=""
+export INTERFACE=""
 
 EOF
 )
