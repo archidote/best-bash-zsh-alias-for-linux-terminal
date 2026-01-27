@@ -70,6 +70,7 @@ alias filer='nautilus . &'
 alias be="base64 <<<"
 alias bd="base64 -d <<<"
 alias n="nano \$1"
+alias md5="echo -n "$1" | md5sum"
 
 lr() {
   cmd="$*"
@@ -99,6 +100,10 @@ ff() {
     find . -iname "*$1*" | grep -i "$1"
 }
 
+md5s() {
+  printf "%s" "$*" | md5sum | cut -d" " -f1
+}
+
 export USER=""
 export PASSWORD=""
 export DC=""
@@ -115,14 +120,16 @@ EOF
 alias_zsh=$(cat <<'EOF'
 
 ### Zsh-specific options ###
+### HISTORY (zsh)
+setopt EXTENDED_HISTORY
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_IGNORE_SPACE
-setopt HIST_REDUCE_BLANKS
-export HISTSIZE=10000
-export HISTFILESIZE=10000
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+HIST_STAMPS="yyyy-mm-dd"
 ########## end_bestAliasLinux ##########
 
 EOF
