@@ -120,16 +120,14 @@ EOF
 alias_zsh=$(cat <<'EOF'
 
 ### Zsh-specific options ###
-### HISTORY (zsh)
-setopt EXTENDED_HISTORY
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_IGNORE_SPACE
-export HISTSIZE=100000
-export HISTFILESIZE=100000
-HIST_STAMPS="yyyy-mm-dd"
+setopt HIST_REDUCE_BLANKS
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 ########## end_bestAliasLinux ##########
 
 EOF
@@ -142,6 +140,7 @@ shopt -s histappend
 export HISTCONTROL=ignoredups:ignorespace
 export HISTSIZE=10000
 export HISTFILESIZE=10000
+export HISTTIMEFORMAT='%F %T '
 ########## end_bestAliasLinux ##########
 
 EOF
