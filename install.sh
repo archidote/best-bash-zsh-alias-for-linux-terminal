@@ -21,6 +21,8 @@ alias jr="sudo apt remove \$1"
 alias jj="sudo apt autoremove"
 alias ai="sudo apt install"
 alias l="ls -alt"
+alias lks="ls -alt"
+alias ms="ls -alt"
 alias h="history"
 alias ..="cd .."
 alias b="cd -"
@@ -70,7 +72,7 @@ alias filer='nautilus . &'
 alias be="base64 <<<"
 alias bd="base64 -d <<<"
 alias n="nano \$1"
-alias md5="echo -n "$1" | md5sum"
+alias naon="nano"
 
 lr() {
   cmd="$*"
@@ -100,8 +102,28 @@ ff() {
     find . -iname "*$1*" | grep -i "$1"
 }
 
-md5s() {
-  printf "%s" "$*" | md5sum | cut -d" " -f1
+cD() {
+  if [ "$1" = ".." ] || [ -z "$1" ]; then
+    cd ..
+  else
+    cd "$@"
+  fi
+}
+
+CD() {
+  if [ "$1" = ".." ] || [ -z "$1" ]; then
+    cd ..
+  else
+    cd "$@"
+  fi
+}
+
+Cd() {
+  if [ "$1" = ".." ] || [ -z "$1" ]; then
+    cd ..
+  else
+    cd "$@"
+  fi
 }
 
 export USER=""
@@ -129,6 +151,10 @@ setopt HIST_REDUCE_BLANKS
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 ########## end_bestAliasLinux ##########
+
+cd_up() { cd ..; zle reset-prompt }
+zle -N cd_up
+bindkey '^[p' cd_up    # Alt+p
 
 EOF
 )
