@@ -76,11 +76,9 @@ alias naon="nano"
 
 lr() {
   cmd="$*"
-
-  # sécurise le nom du fichier
+  
   safe_cmd="${cmd//[^a-zA-Z0-9_]/_}"
 
-  # jour de la semaine en anglais
   day="$(date +%A | tr '[:upper:]' '[:lower:]')"
 
   base_folder="/workspace/_logs"
@@ -100,30 +98,6 @@ ff() {
         return 1
     fi
     find . -iname "*$1*" | grep -i "$1"
-}
-
-cD() {
-  if [ "$1" = ".." ] || [ -z "$1" ]; then
-    cd ..
-  else
-    cd "$@"
-  fi
-}
-
-CD() {
-  if [ "$1" = ".." ] || [ -z "$1" ]; then
-    cd ..
-  else
-    cd "$@"
-  fi
-}
-
-Cd() {
-  if [ "$1" = ".." ] || [ -z "$1" ]; then
-    cd ..
-  else
-    cd "$@"
-  fi
 }
 
 export USER=""
