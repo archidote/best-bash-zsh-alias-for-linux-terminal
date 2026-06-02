@@ -75,8 +75,15 @@ alias n="nano \$1"
 alias naon="nano"
 
 lr() {
+  no_color=0
+
+  if [[ "$1" == "-n" ]]; then
+    no_color=1
+    shift
+  fi
+
   cmd="$*"
-  
+
   safe_cmd="${cmd//[^a-zA-Z0-9_]/_}"
 
   day="$(date +%A | tr '[:upper:]' '[:lower:]')"
@@ -88,8 +95,13 @@ lr() {
 
   log_file="${folder}/$(date +%Y-%m-%d-%H-%M-%S)_${safe_cmd}.log"
 
-  script -q -c "zsh -ic 'setopt NO_NOMATCH; ${cmd//\'/\'\\\'\'}'" /dev/null \
-    | tee -a "$log_file"
+  if (( no_color )); then
+    script -q -c "zsh -ic 'setopt NO_NOMATCH; ${cmd//\'/\'\\\'\'}'" /dev/null \
+      | tee >(sed -r 's/\x1B\[[0-9;]*[[:alpha:]]//g' >> "$log_file")
+  else
+    script -q -c "zsh -ic 'setopt NO_NOMATCH; ${cmd//\'/\'\\\'\'}'" /dev/null \
+      | tee -a "$log_file"
+  fi
 }
 
 ff() { 
