@@ -138,10 +138,6 @@ export HISTSIZE=10000
 export HISTFILESIZE=10000
 ########## end_bestAliasLinux ##########
 
-cd_up() { cd ..; zle reset-prompt }
-zle -N cd_up
-bindkey '^[p' cd_up    # Alt+p
-
 EOF
 )
 
