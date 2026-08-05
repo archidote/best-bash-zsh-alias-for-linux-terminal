@@ -127,7 +127,8 @@ EOF
 
 alias_zsh=$(cat <<'EOF'
 
-### Zsh-specific options ###
+### <Zsh-specific options> ###
+
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
@@ -136,6 +137,37 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 export HISTSIZE=10000
 export HISTFILESIZE=10000
+
+# Import custom history only in Exegol containers (https://docs.exegol.com/)
+
+if [[ -d "/.exegol" ]]; then
+    export USER=""
+    export PASSWORD=""
+    export DC=""
+    export DC1=""
+    export DC2=""
+    export DC3=""
+    export DOMAIN=""
+    export DOM=""
+    export INTERFACE=""
+    HISTORY_SOURCE="/opt/my-resources/setup/custom_commands_history.txt"
+    HISTORY_TARGET="${HISTFILE:-$HOME/.zsh_history}"
+    HISTORY_HASH="$HOME/.custom_history_hash"
+
+    if [[ -f "$HISTORY_SOURCE" ]]; then
+        CURRENT_HASH=$(sha256sum "$HISTORY_SOURCE" | awk '{print $1}')
+
+        if [[ ! -f "$HISTORY_HASH" || "$CURRENT_HASH" != "$(cat "$HISTORY_HASH")" ]]; then
+            cat "$HISTORY_SOURCE" >> "$HISTORY_TARGET"
+            echo "$CURRENT_HASH" > "$HISTORY_HASH"
+            echo "[+] Custom history updated."
+        fi
+    fi
+fi
+
+
+### </Zsh-specific options> ###
+
 ########## end_bestAliasLinux ##########
 
 EOF
@@ -143,12 +175,16 @@ EOF
 
 alias_bash=$(cat <<'EOF'
 
-### Bash-specific options ###
+### <Bash-specific options> ###
+
 shopt -s histappend
 export HISTCONTROL=ignoredups:ignorespace
 export HISTSIZE=10000
 export HISTFILESIZE=10000
 export HISTTIMEFORMAT='%F %T '
+
+### </Bash-specific options> ###
+
 ########## end_bestAliasLinux ##########
 
 EOF
