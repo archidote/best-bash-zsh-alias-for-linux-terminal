@@ -1,3 +1,5 @@
+
+
 # Best Aliases for Linux Terminal
 
 *Save time when you’re in a hurry at the terminal.*
@@ -5,7 +7,7 @@
 This shell script can be executed via `curl` to install a set of predefined aliases into the user’s `~/.bashrc` or `~/.zshrc` files.
 
 
-# Install and and auto configure 
+# Install and auto configure
 
 ## bash
 
